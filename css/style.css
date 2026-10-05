@@ -1,1 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: rgb(151, 255, 255);
+    grid-area: hd;
+    text-align: center;
+}
+
+.sidebar{
+    background-color: lightgoldenrodyellow;
+    grid-area: sd;
+}
+
+.main{
+    background-color:rgb(255, 213, 236);
+    grid-area: mn;
+}
+
+.footer{
+    background-color: rgb(190, 255, 222);
+    grid-area: ft;
+    text-align: center;
+}
+
+
+.page-layout{
+    display: grid;
+    grid-template-areas:
+    "hd"
+    "sd"
+    "mn"
+    "ft";
+    gap: 20px;
+}
+
+
+
+@media (min-width: 768px) {
+    .page-layout {
+        grid-template-areas:
+            "hd hd"
+            "sd mn"
+            "ft ft";
+        grid-template-columns: 220px 1fr;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-1 {
+        grid-column: 1 / 3;
+    }
+}
+
+
+
 
